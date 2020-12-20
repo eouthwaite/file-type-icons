@@ -35,6 +35,11 @@
     position: relative;
   }
 
+  // text files
+  [data-name$='.txt']:before {
+    .text-file-icon;
+  }
+
   // In project configuration files
   [data-name^='.']:before,
   [data-name$='.json']:before,
@@ -51,6 +56,7 @@
     .coffeescript-icon;
   }
 
+  // Java files
   [data-name$='.java']:before {
     .java-icon;
   }
@@ -154,9 +160,17 @@
     .pdf-icon;
   }
 
+  // Perl files
+  [data-name$='.pl']:before,
+  [data-name$='.pm']:before,
+  [data-name$='.PL']:before {
+    .perl-icon;
+  }
+
   // Log files
   .file-icon-log:before,
-  [data-name$='.log']:before {
+  [data-name$='.log']:before,
+  [data-name$='.out']:before {
     .log-icon;
   }
 
@@ -305,6 +319,19 @@
   // Groovy files
   [data-name$='.groovy']:before {
     .groovy-icon;
+  }
+
+  // xml files
+  [data-name$='.xsl']:before,
+  [data-name$='.xml']:before {
+    .xml-file-icon;
+  }
+
+  // xquery files
+  [data-name$='.xq']:before,
+  [data-name$='.xquery']:before,
+  [data-name$='.xqy']:before {
+    .xquery-icon;
   }
 
   // Fixup for devicons

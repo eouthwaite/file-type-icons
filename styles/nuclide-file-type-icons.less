@@ -24,6 +24,11 @@
     top: 11px;
   }
 
+  // text files
+  span.icon[data-name$='.txt']:before {
+    .text-file-icon;
+  }
+
   // In project configuration files
   span.icon[data-name^='.']:before,
   span.icon[data-name$='.json']:before,
@@ -82,6 +87,13 @@
   span.icon[data-name='package-lock.json']:before,
   span.icon[data-name$='.lock']:before {
     .lock-icon;
+  }
+
+  // Perl files
+  span.icon[data-name='pl']:before,
+  span.icon[data-name$='pm']:before,
+  span.icon[data-name$='PL']:before {
+    .perl-icon;
   }
 
   // Ruby files
@@ -145,7 +157,8 @@
 
   // Log files
   .file-icon-log:before,
-  span.icon[data-name$='.log']:before {
+  span.icon[data-name$='.log']:before,
+  span.icon[data-name$='.out']:before {
     .log-icon;
   }
 
@@ -288,6 +301,19 @@
   // Groovy files
   span.icon[data-name$='.groovy']:before {
     .groovy-icon;
+  }
+
+  // xml files
+  span.icon[data-name$='.xsl']:before,
+  span.icon[data-name$='.xml']:before {
+    .xml-file-icon;
+  }
+
+  // xquery files
+  span.icon[data-name$='.xq']:before,
+  span.icon[data-name$='.xquery']:before,
+  span.icon[data-name$='.xqy']:before {
+    .xquery-icon;
   }
 
   // Fixup for devicons
