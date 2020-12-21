@@ -237,23 +237,32 @@
     }
   }
 
-  // Todos
-  [data-name*='todo']:before {
-    .todo-icon;
+  // Cucumber files
+  [data-name$='.feature']:before {
+    .cucumber-icon;
   }
 
-  // Shell scripts
-  [data-path*='bin/']:before,
-  [data-name$='.sh']:before,
-  [data-name$='.bat']:before,
-  [data-name$='.cmd']:before,
-  [data-name$='.ps1']:before {
-    .shell-script-icon;
+  // Elixir
+  [data-name$='.ex']:before,
+  [data-name$='.exs']:before {
+    .elixir-icon;
   }
 
-  // Symlinks
-  .icon-file-symlink-file:before {
-    .symlink-icon;
+  // Factory files
+  [data-name$='_factory.rb']:before,
+  [data-name$='_fabricator.rb']:before,
+  [data-name$='_fixture.rb']:before {
+    .factory-icon;
+  }
+
+  // Go
+  [data-name$='.go']:before {
+    .go-icon;
+  }
+
+  // Groovy files
+  [data-name$='.groovy']:before {
+    .groovy-icon;
   }
 
   // Grunt
@@ -270,21 +279,38 @@
     .gulp-icon;
   }
 
-  // Elixir
-  [data-name$='.ex']:before,
-  [data-name$='.exs']:before {
-    .elixir-icon;
-  }
-
-  // Go
-  [data-name$='.go']:before {
-    .go-icon;
-  }
-
   // Haskell files
   :not([data-name$='Spec.hs'])[data-name$='.hs']:before,
   :not([data-name$='Spec.lhs'])[data-name$='.lhs']:before {
     .haskell-icon;
+  }
+
+  // RDF and SPARQL
+  [data-name$='.rdf']:before,
+  [data-name$='.sparql']:before,
+  [data-name$='.ttl']:before,
+  [data-name$='.turtle']:before {
+    .rdf-icon;
+  }
+
+  // ReactJS files
+  [data-name$='.jsx']:before,
+  [data-name$='.cjsx']:before {
+    .react-icon;
+  }
+
+  // Shell scripts
+  [data-path*='bin/']:before,
+  [data-name$='.sh']:before,
+  [data-name$='.bat']:before,
+  [data-name$='.cmd']:before,
+  [data-name$='.ps1']:before {
+    .shell-script-icon;
+  }
+
+  // Symlinks
+  .icon-file-symlink-file:before {
+    .symlink-icon;
   }
 
   // Specs
@@ -298,27 +324,9 @@
     .test-file-icon;
   }
 
-  // Cucumber files
-  [data-name$='.feature']:before {
-    .cucumber-icon;
-  }
-
-  // ReactJS files
-  [data-name$='.jsx']:before,
-  [data-name$='.cjsx']:before {
-    .react-icon;
-  }
-
-  // Factory files
-  [data-name$='_factory.rb']:before,
-  [data-name$='_fabricator.rb']:before,
-  [data-name$='_fixture.rb']:before {
-    .factory-icon;
-  }
-
-  // Groovy files
-  [data-name$='.groovy']:before {
-    .groovy-icon;
+  // Todos
+  [data-name*='todo']:before {
+    .todo-icon;
   }
 
   // xml files

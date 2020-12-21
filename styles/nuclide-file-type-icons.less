@@ -24,9 +24,11 @@
     top: 11px;
   }
 
-  // text files
-  span.icon[data-name$='.txt']:before {
-    .text-file-icon;
+  // Archives
+  span.icon[data-name$='.zip']:before,
+  span.icon[data-name$='.rar']:before,
+  span.icon[data-name$='.gz']:before {
+    .archive-file-icon;
   }
 
   // In project configuration files
@@ -43,15 +45,6 @@
   span.icon[data-name$='.coffee.md']:before,
   span.icon[data-name='Cakefile']:before {
     .coffeescript-icon;
-  }
-
-  span.icon[data-name$='.java']:before {
-    .java-icon;
-  }
-
-  // JavaScript files
-  span.icon[data-name$='.js']:before {
-    .javascript-icon;
   }
 
   // Meta configuration files
@@ -72,94 +65,19 @@
     .settings-icon;
   }
 
-  // GIT repo
-  span.icon[data-name$='.git']:before {
-    .repository-icon;
+  // Ctags files
+  span.icon:not(.icon-file-directory)[data-name='.ctags']:before,
+  span.icon:not(.icon-file-directory)[data-name='ctags']:before,
+  span.icon:not(.icon-file-directory)[data-name='.tags']:before,
+  span.icon:not(.icon-file-directory)[data-name='.gemtags']:before,
+  span.icon:not(.icon-file-directory)[data-name='tags']:before,
+  span.icon:not(.icon-file-directory)[data-name='TAGS']:before {
+    .tag-icon;
   }
 
-
-  // Source map file
-  span.icon[data-name$='.map']:before {
-    .map-icon;
-  }
-
-  // Lock files
-  span.icon[data-name='package-lock.json']:before,
-  span.icon[data-name$='.lock']:before {
-    .lock-icon;
-  }
-
-  // Perl files
-  span.icon[data-name='pl']:before,
-  span.icon[data-name$='pm']:before,
-  span.icon[data-name$='PL']:before {
-    .perl-icon;
-  }
-
-  // Ruby files
-  span.icon[data-name$='.rb']:before,
-  span.icon[data-name$='.ru']:before,
-  span.icon[data-name$='.rake']:before,
-  span.icon[data-name$='.gemspec']:before,
-  span.icon[data-name='Gemfile']:before,
-  span.icon[data-name='Rakefile']:before,
-  span.icon[data-name='Guardfile']:before,
-  span.icon[data-name='Capfile']:before,
-  span.icon[data-name$='gemrc']:before,
-  span.icon[data-name$='pryrc']:before {
-    .ruby-icon;
-  }
-
-  // Stylesheets
-  span.icon[data-name$='.styl']:before,
-  span.icon[data-name$='.css']:before,
-  span.icon[data-name$='.sass']:before,
-  span.icon[data-name$='.scss']:before,
-  span.icon[data-name$='.less']:before {
-    .stylesheet-icon;
-  }
-
-  // Archives
-  span.icon[data-name$='.zip']:before,
-  span.icon[data-name$='.rar']:before,
-  span.icon[data-name$='.gz']:before {
-    .archive-file-icon;
-  }
-
-  // Templates
-  span.icon[data-name$='.jade']:before,
-  span.icon[data-name$='.haml']:before,
-  span.icon[data-name$='.erb']:before,
-  span.icon[data-name$='.hbs']:before,
-  span.icon[data-name$='.pug']:before,
-  span.icon[data-name$='.slim']:before,
-  span.icon[data-name$='.twig']:before {
-    .template-icon;
-  }
-
-  // DS_Store
-  span.icon[data-name$='.DS_Store']:before,
-  span.icon[data-name*='.sublime-']:before {
-    .low-level-settings-icon;
-  }
-
-  // PDF files
-  span.icon[data-name$='.pdf']:before {
-    .pdf-icon;
-  }
-
-  // PHP files
-  span.icon[data-name$='.php']:before,
-  span.icon[data-name$='.phar']:before,
-  span.icon[data-name$='.phtml']:before {
-    .php-icon;
-  }
-
-  // Log files
-  .file-icon-log:before,
-  span.icon[data-name$='.log']:before,
-  span.icon[data-name$='.out']:before {
-    .log-icon;
+  // Cucumber files
+  span.icon[data-name$='.feature']:before {
+    .cucumber-icon;
   }
 
   // Database & dumps
@@ -171,6 +89,25 @@
     .database-icon;
   }
 
+  // DS_Store
+  span.icon[data-name$='.DS_Store']:before,
+  span.icon[data-name*='.sublime-']:before {
+    .low-level-settings-icon;
+  }
+
+  // Elixir
+  span.icon[data-name$='.ex']:before,
+  span.icon[data-name$='.exs']:before {
+    .elixir-icon;
+  }
+
+  // Factory files
+  span.icon[data-name$='_factory.rb']:before,
+  span.icon[data-name$='_fabricator.rb']:before,
+  span.icon[data-name$='_fixture.rb']:before {
+    .factory-icon;
+  }
+
   // Fonts files
   span.icon[data-name$='.woff']:before,
   span.icon[data-name$='.ttf']:before,
@@ -179,63 +116,19 @@
     .font-icon;
   }
 
-  // HTML files
-  span.icon[data-name$='.html']:before {
-    .html-icon;
+  // GIT repo
+  span.icon[data-name$='.git']:before {
+    .repository-icon;
   }
 
-  // Ctags files
-  span.icon:not(.icon-file-directory)[data-name='.ctags']:before,
-  span.icon:not(.icon-file-directory)[data-name='ctags']:before,
-  span.icon:not(.icon-file-directory)[data-name='.tags']:before,
-  span.icon:not(.icon-file-directory)[data-name='.gemtags']:before,
-  span.icon:not(.icon-file-directory)[data-name='tags']:before,
-  span.icon:not(.icon-file-directory)[data-name='TAGS']:before {
-    .tag-icon;
+  // Go
+  span.icon[data-name$='.go']:before {
+    .go-icon;
   }
 
-  // Images files
-  span.icon[data-name$='.jpg']:before,
-  span.icon[data-name$='.png']:before,
-  span.icon[data-name$='.gif']:before,
-  span.icon[data-name$='.psd']:before,
-  span.icon[data-name$='.svg']:before,
-  span.icon[data-name$='.ico']:before {
-    .image-file-icon;
-  }
-
-  // Videos files
-  span.icon[data-name$='.mpg']:before,
-  span.icon[data-name$='.avi']:before,
-  span.icon[data-name$='.mov']:before,
-  span.icon[data-name$='.flv']:before,
-  span.icon[data-name$='.swf']:before,
-  span.icon[data-name$='.ogg']:before {
-    .video-file-icon;
-  }
-
-  // Markdown files
-  span.icon[data-name$='.md']:before {
-    .markdown-icon;
-  }
-
-  // Todos
-  span.icon[data-name*='todo']:before {
-    .todo-icon;
-  }
-
-  // Shell scripts
-  span.icon[data-path*='bin/']:before,
-  span.icon[data-name$='.sh']:before,
-  span.icon[data-name$='.bat']:before,
-  span.icon[data-name$='.cmd']:before,
-  span.icon[data-name$='.ps1']:before {
-    .shell-script-icon;
-  }
-
-  // Symlinks
-  .icon-file-symlink-file:before {
-    .symlink-icon;
+  // Groovy files
+  span.icon[data-name$='.groovy']:before {
+    .groovy-icon;
   }
 
   // Grunt
@@ -252,21 +145,106 @@
     .gulp-icon;
   }
 
-  // Elixir
-  span.icon[data-name$='.ex']:before,
-  span.icon[data-name$='.exs']:before {
-    .elixir-icon;
-  }
-
-  // Go
-  span.icon[data-name$='.go']:before {
-    .go-icon;
-  }
-
   // Haskell
   span.icon:not([data-name$='Spec.hs'])[data-name$='.hs']:before,
   span.icon:not([data-name$='Spec.lhs'])[data-name$='.lhs']:before {
     .haskell-icon;
+  }
+
+  // HTML files
+  span.icon[data-name$='.html']:before {
+    .html-icon;
+  }
+
+  // Images files
+  span.icon[data-name$='.jpg']:before,
+  span.icon[data-name$='.png']:before,
+  span.icon[data-name$='.gif']:before,
+  span.icon[data-name$='.psd']:before,
+  span.icon[data-name$='.svg']:before,
+  span.icon[data-name$='.ico']:before {
+    .image-file-icon;
+  }
+
+  // Java files
+  span.icon[data-name$='.java']:before {
+    .java-icon;
+  }
+
+  // JavaScript files
+  span.icon[data-name$='.js']:before {
+    .javascript-icon;
+  }
+
+  // Lock files
+  span.icon[data-name='package-lock.json']:before,
+  span.icon[data-name$='.lock']:before {
+    .lock-icon;
+  }
+
+  // Log files
+  .file-icon-log:before,
+  span.icon[data-name$='.log']:before,
+  span.icon[data-name$='.out']:before {
+    .log-icon;
+  }
+
+  // Markdown files
+  span.icon[data-name$='.md']:before {
+    .markdown-icon;
+  }
+
+  // PDF files
+  span.icon[data-name$='.pdf']:before {
+    .pdf-icon;
+  }
+
+  // Perl files
+  span.icon[data-name='pl']:before,
+  span.icon[data-name$='pm']:before,
+  span.icon[data-name$='PL']:before {
+    .perl-icon;
+  }
+
+  // PHP files
+  span.icon[data-name$='.php']:before,
+  span.icon[data-name$='.phar']:before,
+  span.icon[data-name$='.phtml']:before {
+    .php-icon;
+  }
+
+  // ReactJS files
+  span.icon[data-name$='.jsx']:before,
+  span.icon[data-name$='.cjsx']:before {
+    .react-icon;
+  }
+
+  // Ruby files
+  span.icon[data-name$='.rb']:before,
+  span.icon[data-name$='.ru']:before,
+  span.icon[data-name$='.rake']:before,
+  span.icon[data-name$='.gemspec']:before,
+  span.icon[data-name='Gemfile']:before,
+  span.icon[data-name='Rakefile']:before,
+  span.icon[data-name='Guardfile']:before,
+  span.icon[data-name='Capfile']:before,
+  span.icon[data-name$='gemrc']:before,
+  span.icon[data-name$='pryrc']:before {
+    .ruby-icon;
+  }
+
+  // Shell scripts
+  span.icon[data-path*='bin/']:before,
+  span.icon[data-name$='.sh']:before,
+  span.icon[data-name$='.bat']:before,
+  span.icon[data-name$='.cmd']:before,
+  span.icon[data-name$='.ps1']:before {
+    .shell-script-icon;
+  }
+
+  // Source map file
+  span.icon[data-name$='.map']:before {
+    .map-icon;
   }
 
   // Specs
@@ -280,27 +258,49 @@
     .test-file-icon;
   }
 
-  // Cucumber files
-  span.icon[data-name$='.feature']:before {
-    .cucumber-icon;
+  // Stylesheets
+  span.icon[data-name$='.styl']:before,
+  span.icon[data-name$='.css']:before,
+  span.icon[data-name$='.sass']:before,
+  span.icon[data-name$='.scss']:before,
+  span.icon[data-name$='.less']:before {
+    .stylesheet-icon;
   }
 
-  // ReactJS files
-  span.icon[data-name$='.jsx']:before,
-  span.icon[data-name$='.cjsx']:before {
-    .react-icon;
+  // Symlinks
+  .icon-file-symlink-file:before {
+    .symlink-icon;
   }
 
-  // Factory files
-  span.icon[data-name$='_factory.rb']:before,
-  span.icon[data-name$='_fabricator.rb']:before,
-  span.icon[data-name$='_fixture.rb']:before {
-    .factory-icon;
+  // Templates
+  span.icon[data-name$='.jade']:before,
+  span.icon[data-name$='.haml']:before,
+  span.icon[data-name$='.erb']:before,
+  span.icon[data-name$='.hbs']:before,
+  span.icon[data-name$='.pug']:before,
+  span.icon[data-name$='.slim']:before,
+  span.icon[data-name$='.twig']:before {
+    .template-icon;
   }
 
-  // Groovy files
-  span.icon[data-name$='.groovy']:before {
-    .groovy-icon;
+  // text files
+  span.icon[data-name$='.txt']:before {
+    .text-file-icon;
+  }
+
+  // Todos
+  span.icon[data-name*='todo']:before {
+    .todo-icon;
+  }
+
+  // Videos files
+  span.icon[data-name$='.mpg']:before,
+  span.icon[data-name$='.avi']:before,
+  span.icon[data-name$='.mov']:before,
+  span.icon[data-name$='.flv']:before,
+  span.icon[data-name$='.swf']:before,
+  span.icon[data-name$='.ogg']:before {
+    .video-file-icon;
   }
 
   // xml files
